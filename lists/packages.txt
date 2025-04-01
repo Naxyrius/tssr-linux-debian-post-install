@@ -2,3 +2,6 @@ nmap
 net-tools
 htop
 curl
+gnote
+neofetch
+bitwarden
