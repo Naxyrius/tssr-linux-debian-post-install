@@ -4,4 +4,7 @@ htop
 curl
 gnote
 neofetch
-bitwarden
+rsync
+dnsutils
+fail2ban
+thefuck
