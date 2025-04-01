@@ -100,15 +100,15 @@ if ask_yes_no "Would you like to add a public SSH key?"; then
 fi
 
 # === 7. SSH CONFIGURATION: KEY AUTH ONLY === désactive le mdp et autorise uniquement la conexion par clé ssh 
-if [ -f /etc/ssh/sshd_config ]; then
-  sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
-  sed -i 's/^#\?ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
-  sed -i 's/^#\?PubkeyAuthentication.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config
-  systemctl restart ssh
-  log "SSH configured to accept key-based authentication only."
-else
-  log "sshd_config file not found."
-fi
+#if [ -f /etc/ssh/sshd_config ]; then
+ # sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+  #sed -i 's/^#\?ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
+  #sed -i 's/^#\?PubkeyAuthentication.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+  #systemctl restart ssh
+  #log "SSH configured to accept key-based authentication only."
+#else
+ # log "sshd_config file not found."
+#fi
 
 log "Post-installation script completed."
 
